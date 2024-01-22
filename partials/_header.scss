@@ -1,0 +1,158 @@
+header {
+    width: 100%;
+}
+
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+i{
+    color: $white-normal;
+}
+
+a{
+    color: $white-normal;
+}
+
+.header-icons{
+    display: flex;
+    gap: 14px;
+}
+
+.header-icons a:hover{
+    i{
+        animation: transateY 0.8s infinite alternate;
+        color: $red-light;
+    }
+}
+
+@keyframes trasnsleY {
+    from{
+        transform: translateY(0) scale(1)
+    }
+    to {
+        transform: translateY(-8px) scale(1)
+    }
+}
+
+
+.header-bottom{
+    border: 1px solid $white-normal;
+    padding: 8px 24px;
+    border-radius: 4px;
+    color: $white-normal;
+    background-color: transparent;
+
+    
+}
+
+.header-bottom:hover{
+    border: 1px solid $red-light;
+    background-color: $red-light;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+@media screen and (max-width: 768px){
+    .header-content{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+            justify-content: center;}
+
+        i{
+            margin-top: 16px;
+            font-size: 34px;
+        }
+        .header-logo img{
+    width: 100%;
+    margin-top: 46px;}
+    
+    .header-bottom{
+        display: none;
+    }
+
+}
+
+// ///////  HERO ///////
+
+.hero {
+     color:$white-normal;
+     min-height: 80vh;
+
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     padding: 14px;
+
+     h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 46px;
+     }
+
+     p{
+        text-align: center;
+        margin: 14px 0;
+     }
+}
+
+.buttom-contact{
+    padding: 14px 28px;
+    color: $white-normal;
+    background-color: $red-normal;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 14px 0;
+}
+
+.buttom-contact:hover{
+   animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.07);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .hero{
+        min-height: 60vh;
+
+        h1{
+            font-size: 34px;
+            padding: 0 14px;
+            width: 100%;
+        }
+
+        p{
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .hero h1{
+        font-size: 22px;
+    }
+}
+// FIM HERO ////
+
+
+
+
